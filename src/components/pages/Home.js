@@ -21,10 +21,24 @@ class Home extends Component {
     const PAGE_GIF = "https://cdn.cnn.com/cnnnext/dam/assets/171004155619-singapore-vending-machine-chef-in-box-008-full-169.jpg"
     const PAGE_ALT = 'Vending Machine'
 
+    const styles =
+    {
+      backgroundImage: 'url("./img/vending.jpg")',
+      backgroundColor: '#cccccc',
+      height: '100%',
+      width: '100%',
+      position: 'absolute',
+      top: '0',
+      left: '0',
+      zIndex: '-1',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover',
+    }
+
     if (loading) return <div><img alt={LOADING_ALT} src={LOADING_GIF}></img></div>
     return (
-      <div className='PageContainer'>
-        <img style={{ width: '100vh' }} alt={PAGE_ALT} src={PAGE_GIF}></img>
+      <div style={styles}>
       </div>);
   }
 }

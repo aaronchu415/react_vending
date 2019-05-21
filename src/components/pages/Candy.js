@@ -16,10 +16,25 @@ class Candy extends Component {
 
     const { loading } = this.state
 
-    if (loading) return <div><img src="https://cdn.dribbble.com/users/484807/screenshots/4421616/kinsella_jared_chemistryloading_2017-08-09.gif"></img></div>
+    const styles =
+    {
+      backgroundImage: 'url("./img/candy.jpg")',
+      backgroundColor: '#cccccc',
+      height: '100%',
+      width: '100%',
+      position: 'absolute',
+      top: '0',
+      left: '0',
+      zIndex: '-1',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover',
+    }
+
+
+    if (loading) return <div><img src="https://cdn.dribbble.com/users/484807/screenshots/4421616/kinsella_jared_chemistryloading_2017-08-09.gif"></img></div >
     return (
-      <div>
-        <img src="https://media.giphy.com/media/Qrg53V9x9Ia08/giphy.gif"></img>
+      <div style={styles}>
       </div>);
   }
 }

@@ -9,22 +9,32 @@ class Soda extends Component {
 
     setTimeout(() => {
       this.setState({ loading: false })
-    }, 2000)
+    }, 500)
   }
 
   render() {
 
     const { loading } = this.state
-    const LOADING_GIF = "https://cdn.dribbble.com/users/484807/screenshots/4421616/kinsella_jared_chemistryloading_2017-08-09.gif"
-    const LOADING_ALT = 'loading'
 
-    const PAGE_GIF = "https://media.giphy.com/media/ttqZwYqJKd1HW/giphy.gif"
-    const PAGE_ALT = 'Soda'
+    const styles =
+    {
+      backgroundImage: 'url("./img/soda.jpg")',
+      backgroundColor: '#cccccc',
+      height: '100%',
+      width: '100%',
+      position: 'absolute',
+      top: '0',
+      left: '0',
+      zIndex: '-1',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover',
+    }
 
-    if (loading) return <div><img alt={LOADING_ALT} src={LOADING_GIF}></img></div>
+
+    if (loading) return <div><img src="https://cdn.dribbble.com/users/484807/screenshots/4421616/kinsella_jared_chemistryloading_2017-08-09.gif"></img></div >
     return (
-      <div className='PageContainer'>
-        <img alt={PAGE_ALT} src={PAGE_GIF}></img>
+      <div style={styles}>
       </div>);
   }
 }

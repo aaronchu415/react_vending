@@ -9,7 +9,7 @@ class Macbook extends Component {
 
     setTimeout(() => {
       this.setState({ loading: false })
-    }, 2000)
+    }, 500)
   }
 
   render() {
@@ -21,10 +21,24 @@ class Macbook extends Component {
     const PAGE_GIF = "https://media.giphy.com/media/kK0ig3VKMgrS0/giphy.gif"
     const PAGE_ALT = 'Macbook'
 
+    const styles =
+    {
+      backgroundImage: 'url("./img/macbook.jpg")',
+      backgroundColor: '#cccccc',
+      height: '100%',
+      width: '100%',
+      position: 'absolute',
+      top: '0',
+      left: '0',
+      zIndex: '-1',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover',
+    }
+
     if (loading) return <div><img alt={LOADING_ALT} src={LOADING_GIF}></img></div>
     return (
-      <div className='PageContainer'>
-        <img alt={PAGE_ALT} src={PAGE_GIF}></img>
+      <div style={styles}>
       </div>);
   }
 }
